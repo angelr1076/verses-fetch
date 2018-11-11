@@ -19,7 +19,7 @@ const fetchThis =  () => {
     })
     .then (data => {
         quoteBox.innerHTML = `${data.results[0].text} - ${data.results[0].context}`;
-        let newQuote = myQuote.innerText;
+        let newQuote = quoteBox.innerText;
 
         function tweetThis() {
             tweetButton.setAttribute('href', `https://twitter.com/share?text=${newQuote}`);
