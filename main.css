@@ -4,6 +4,10 @@ body {
     width: 990px;
     text-align: center;
     line-height: 50px;
+    background-image: url("https://images.unsplash.com/photo-1518006821190-bb4ad1d1f23d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69dc3c8a93e1948dc48d7d0d4b7c1815&auto=format&fit=crop&w=1140&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
 /* HEADER AND QUOTES */
@@ -13,13 +17,12 @@ body {
     font-weight: 1000;
     font-size: 70px;
     letter-spacing: 5px;
-    text-shadow: 3px 3px 7px grey;
 }
 
 #quote, #book {
-    font-size: 30px;
+    font-family: 'Poor Story', cursive;
+    font-size: 40px;
     color: rgb(36, 29, 29);
-    text-shadow: 3px 3px 8px black;
 }
 
 /* BUTTONS */
@@ -58,6 +61,7 @@ body {
     bottom: 0;
     margin: 0 auto;
     width: 990px;
+    padding-bottom: 10%;
 }
 
 footer {
