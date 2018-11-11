@@ -8,37 +8,33 @@
         <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Poor+Story|Poppins" rel="stylesheet">        
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <div class="container">
+        <div class="full-body">
+            <header>
                 <div id="verse-container">
                     <h1 class="title">Bible Verses</h1>
                     <span id="quote"></span>
                     <span id="book"></span>
                 </div>
-            </div>
-        </header>
+            </header>
 
-        <main>
-            <div class="button-container">
-                <div class="quote-container">
-                    <a id="quote-button" class="btn-floating btn-large waves-effect waves-light red" href="#"><i class="fas fa-plus-circle"></i></a>
+            <main>
+                <div class="button-container">
+                    <div class="quote-container">
+                        <a id="quote-button" href="#"><i class="fas fa-plus-circle"></i></a>
+                    </div>
+                    <div class="tweet-container">
+                        <a id="tweet-button"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
-                <div class="tweet-container">
-                    <a id="tweet-button" class="btn-floating btn-large waves-effect waves-light red" href="https://twitter.com/intent/tweet/?text="><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </main>
+            </main>
 
-        <div class="container-footer">
-            <footer>
-                <i class="fa fa-copyright"></i>Created by Angel Rodriguez
-            </footer>
+            <div class="footer-container">
+                <footer>
+                    <i class="fa fa-copyright"></i>Created by Angel Rodriguez
+                </footer>
+            </div>
         </div>
 
         <script src="main.js" async defer></script>

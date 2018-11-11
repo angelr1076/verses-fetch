@@ -1,8 +1,8 @@
 const header = document.querySelector(".title");
-const quoteBox = document.querySelector("#quote");
-const authorBox = document.querySelector("#book");
+let quoteBox = document.querySelector("#quote");
+let authorBox = document.querySelector("#book");
 const quoteButton = document.querySelector("#quote-button");
-const twitterButton = document.querySelector("#tweet-button");
+const tweetButton = document.querySelector("#tweet-button");
 
 const fetchThis =  () => {
     fetch('https://uncovered-treasure-v1.p.mashape.com/random', {
@@ -18,18 +18,17 @@ const fetchThis =  () => {
         }
     })
     .then (data => {
-        quoteBox.innerHTML = `${data.results[0].text} ${data.results[0].context}`;
-        return data;
+        quoteBox.innerHTML = `${data.results[0].text} - ${data.results[0].context}`;
+        let newQuote = myQuote.innerText;
+
+        function tweetThis() {
+            tweetButton.setAttribute('href', `https://twitter.com/share?text=${newQuote}`);
+          }
+
+        quoteButton.addEventListener("click", fetchThis);
+        tweetButton.addEventListener("click", tweetThis); 
     })
     .catch = error => console.log(error);
-
-    quoteButton.addEventListener("click", fetchThis);
-    twitterButton.addEventListener("click", tweetQuote);
-
-    tweetQuote = data => {
-        data.getAttribute("href", `https://twitter.com/intent/tweet?text= ${data.results[0].text} ${data.results[0].context}`).getAttribute('target', '_blank');
-    }
-    
 }
 
 fetchThis();
