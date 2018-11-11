@@ -3,8 +3,10 @@ body {
     margin: 0 auto;
     width: 990px;
     text-align: center;
-    line-height: 220px;
+    line-height: 50px;
 }
+
+/* HEADER AND QUOTES */
 
 .title {
     font-family: 'Poppins', sans-serif;
@@ -14,11 +16,13 @@ body {
     text-shadow: 3px 3px 7px grey;
 }
 
-.verse-container {
-    font-size: 50px;
+#quote, #book {
+    font-size: 30px;
     color: rgb(36, 29, 29);
     text-shadow: 3px 3px 8px black;
 }
+
+/* BUTTONS */
 
 .button-container i {
     font-size: 70px;
@@ -46,6 +50,8 @@ body {
     float: right;
     margin-right: 20%;
 }
+
+/* FOOTER */
 
 .container-footer {
     position: absolute;

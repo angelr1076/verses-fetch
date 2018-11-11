@@ -5,26 +5,31 @@ const quoteButton = document.querySelector("#quote-button");
 const twitterButton = document.querySelector("#tweet-button");
 
 
-    const fetchThis =  () => {
-        fetch('https://uncovered-treasure-v1.p.mashape.com/random', {
-            headers: new Headers({
-            'Accept':'application/json',
-            "X-Mashape-Key": "2UsjshuNOImshdbT4jg9bKJnoNI1p1LoMYujsnVlcNzqy7hEkY"
-            })
-        }
-    )
-        .then(function(response){
-            if(response.ok){
-                return response.json();
-            }
+const fetchThis =  () => {
+    fetch('https://uncovered-treasure-v1.p.mashape.com/random', {
+        headers: new Headers({
+        'Accept':'application/json',
+        "X-Mashape-Key": "2UsjshuNOImshdbT4jg9bKJnoNI1p1LoMYujsnVlcNzqy7hEkY"
         })
-        .then(function(data){
-            return data;
-        })
-        .catch = error => console.log(error);
-
-        console.log(data.results[0].text);
-        fetchThis();
     }
-    
+)
+    .then(response => {
+        if(response.ok){
+            return response.json();
+        }
+    })
+    .then (data => {
+        quoteBox.innerHTML = `${data.results[0].text} ${data.results[0].context}`;
+        return data;
+    })
+    .catch = error => console.log(error);
 
+    quoteButton.addEventListener("click", fetchThis);
+    twitterButton.addEventListener("click", tweetQuote);
+
+    function tweetQuote(data) {
+        twitterButton.attr("href", `https://twitter.com/intent/tweet?text="${data.results[0].text}"  - ${data.results[0].context}`).attr('target', '_blank');
+    }
+}
+
+fetchThis();
