@@ -38,7 +38,7 @@ let fetchQuote = () => {
 }
 
 let changeColors = () => {
-    const colors = ["#330066", "#b0d996", "#ff66c1", "#1d4457", "#cc0000", "#f2de15", "#94cb71", "#8187ff", "#efd9a7"];
+    const colors = ["#330066", "#b0d996", "#ff66c1", "#1d4457", "#cc0000", "#f2de15", "#94cb71", "#8187ff", "#efd9a7", "#bada55", "#819699"];
     let newColor = colors[Math.floor(Math.random() * colors.length)];
     thisBody.style.backgroundColor = newColor;
 }
