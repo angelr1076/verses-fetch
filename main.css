@@ -1,13 +1,16 @@
 
 body {
     margin-top: 5%;
-    overflow-x: hidden;
-    width: 100%;
     font-family: 'Poor Story', cursive;
     text-align: center;
     background-color: #330088;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .full-body {
@@ -76,15 +79,23 @@ body {
 }
 
 footer p {
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 1px;
     font-weight: 800;
+    width: 100%;
 }
 
 @media screen and (max-width: 400px) {
-    .full-body {
-        width: 400%;
-        margin-left: 30%;
-        font-size: 4em;
+    .title, #quote, #book {
+        font-size: 30px;
     }
+
+    .button-container i, .tweet-container i {
+        font-size: 40px;
+    }
+
+    .button-container i:active, .tweet-container i:active {
+        font-size: 38px;
+    }
+    
 }
