@@ -1,7 +1,9 @@
 
 body {
-    margin: 0 auto;
-    width: 990px;
+    margin-top: 5%;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Poor Story', cursive;
     text-align: center;
     background-color: #330088;
     background-size: cover;
@@ -9,8 +11,9 @@ body {
 }
 
 .full-body {
-    margin-top: 5%;
-    width: 90%;
+    margin: auto;
+    height: 100%;
+    max-width: 500px;
     background-color: white;
     justify-content: center;
     border-radius: 5px;
@@ -20,14 +23,12 @@ body {
 /* HEADER AND QUOTES */
 
 .title {
-    font-family: 'Poor Story', cursive;
     font-weight: 1000;
     font-size: 80px;
     letter-spacing: 5px;
 }
 
 #quote, #book {
-    font-family: 'Poor Story', cursive;
     font-size: 40px;
     font-weight: 500;
     color: rgb(36, 29, 29);
@@ -67,13 +68,23 @@ body {
 /* FOOTER */
 
 .footer-container {
-    bottom: 0;
+    display: flex;
+    flex-flow: inherit;
     margin-top: 20%;
+    text-align: justify;
     width: 990px;
 }
 
-footer {
+footer p {
     font-size: 30px;
-    letter-spacing: 2px;
-    font-family: 'Poor Story', cursive;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 400px) {
+    .full-body {
+        width: 400%;
+        margin-left: 30%;
+        font-size: 4em;
+    }
 }
