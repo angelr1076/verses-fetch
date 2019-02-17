@@ -28,12 +28,12 @@ const tweetQuote = quote => {
   tweetButton.setAttribute('href', `https://twitter.com/share?text=${quote}`)
 }
 
-let fetchQuote = () => {
+const fetchQuote = () => {
   quoteButton.addEventListener('click', fetchThis)
   quoteButton.addEventListener('click', changeColors)
 }
 
-let changeColors = () => {
+const changeColors = () => {
   const colors = [
     '#330066',
     '#b0d996',
@@ -47,7 +47,7 @@ let changeColors = () => {
     '#bada55',
     '#819699'
   ]
-  let newColor = colors[Math.floor(Math.random() * colors.length)]
+  const newColor = colors[Math.floor(Math.random() * colors.length)]
   thisBody.style.backgroundColor = newColor
 }
 
